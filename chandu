@@ -1,0 +1,47 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    // Simulate LCD display with printf
+    printf(" AUTOMATIC BILL\n");
+    printf(" SHOPPING CART\n");
+    printf("WELCOME TO\n");
+    printf("SUPER MARKET\n");
+    printf("Plz Add iTem\n");
+
+    // Variables to store price and total products
+    float price = 0.0;
+    int totalProducts = 0;
+
+    // Simulate scanning barcode for tea
+    char input[13]; // 12 digits for barcode + null terminator
+    printf("Enter barcode: ");
+    scanf("%s", input);
+    printf("Scanned barcode: %s\n", input);
+    if (strcmp(input, "03007C2DA0F2") == 0) {
+        printf("Tea Added\n");
+        price = 5.00; // Price for tea
+        totalProducts++;
+        printf("Price of the product: %.2f\n", price);
+        printf("Total products in cart: %d\n\n", totalProducts);
+    } else {
+        printf("Unknown item\n");
+    }
+
+    // Simulate scanning barcode for butter
+    printf("Enter barcode: ");
+    scanf("%s", input);
+    printf("Scanned barcode: %s\n", input);
+    if (strcmp(input, "2700227A344B") == 0) {
+        printf("Butter Added\n");
+        price = 10.00; // Price for butter
+        totalProducts++;
+        printf("Price of the product: %.2f\n", price);
+        printf("Total products in cart: %d\n", totalProducts);
+    } else {
+        printf("Unknown item\n");
+    }
+
+    return 0;
+}
